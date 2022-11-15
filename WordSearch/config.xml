@@ -2,17 +2,8 @@
 <launch4jConfig>
   <dontWrapJar>false</dontWrapJar>
   <headerType>console</headerType>
-  <lib>w32api/libmingw32.a</lib>
-  <lib>w32api/libmingwex.a</lib>
-  <lib>w32api/libgcc.a</lib>
-  <lib>w32api/libmsvcrt.a</lib>
-  <lib>w32api/libmoldname.a</lib>
-  <lib>w32api/libkernel32.a</lib>
-  <lib>w32api/libuser32.a</lib>
-  <lib>w32api/libadvapi32.a</lib>
-  <lib>w32api/libshell32.a</lib>
-  <jar>C:\Users\dionysis\Desktop\WordSearch\Exercise4.jar</jar>
-  <outfile>C:\Users\dionysis\Desktop\WordSearch\WordSearch.exe</outfile>
+  <jar>C:\Users\dionysis\Desktop\new\Exercise4.jar</jar>
+  <outfile>C:\Users\dionysis\Desktop\new\WordSearch.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
@@ -22,9 +13,9 @@
   <stayAlive>false</stayAlive>
   <restartOnCrash>false</restartOnCrash>
   <manifest></manifest>
-  <icon>C:\Users\dionysis\Desktop\WordSearch\language_play_game_word_icon_209599.ico</icon>
+  <icon>C:\Users\dionysis\Desktop\new\language_play_game_word_icon_209599.ico</icon>
   <jre>
-    <path>OpenJDKJRE64</path>
+    <path>jre</path>
     <bundledJre64Bit>false</bundledJre64Bit>
     <bundledJreAsFallback>false</bundledJreAsFallback>
     <minVersion>1.4.0</minVersion>
@@ -32,4 +23,18 @@
     <jdkPreference>jdkOnly</jdkPreference>
     <runtimeBits>64/32</runtimeBits>
   </jre>
+  <versionInfo>
+    <fileVersion>1.0.0.0</fileVersion>
+    <txtFileVersion>NL</txtFileVersion>
+    <fileDescription>Game About To Find The Hidden Words</fileDescription>
+    <copyright>@DionysisTheodosis</copyright>
+    <productVersion>1.0.0.0</productVersion>
+    <txtProductVersion>NL</txtProductVersion>
+    <productName>WordSearch</productName>
+    <companyName></companyName>
+    <internalName>WordSearch</internalName>
+    <originalFilename>WordSearch.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>ENGLISH_US</language>
+  </versionInfo>
 </launch4jConfig>
