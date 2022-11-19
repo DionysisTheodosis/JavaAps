@@ -2,8 +2,8 @@
 <launch4jConfig>
   <dontWrapJar>false</dontWrapJar>
   <headerType>console</headerType>
-  <jar>C:\Users\dionysis\Desktop\new\Exercise4.jar</jar>
-  <outfile>C:\Users\dionysis\Desktop\new\WordSearch.exe</outfile>
+  <jar>C:\Users\dionysis\Desktop\icsd15066_LAB01\Exercise4\Exercise4\dist\Exercise4.jar</jar>
+  <outfile>C:\Users\dionysis\Documents\JavaApps\JavaAps\WordSearch\WordSearch.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
@@ -13,7 +13,7 @@
   <stayAlive>false</stayAlive>
   <restartOnCrash>false</restartOnCrash>
   <manifest></manifest>
-  <icon>C:\Users\dionysis\Desktop\new\language_play_game_word_icon_209599.ico</icon>
+  <icon>C:\Users\dionysis\Documents\JavaApps\JavaAps\WordSearch\language_play_game_word_icon_209599.ico</icon>
   <jre>
     <path>jre</path>
     <bundledJre64Bit>false</bundledJre64Bit>
@@ -26,12 +26,12 @@
   <versionInfo>
     <fileVersion>1.0.0.0</fileVersion>
     <txtFileVersion>NL</txtFileVersion>
-    <fileDescription>Game About To Find The Hidden Words</fileDescription>
-    <copyright>@DionysisTheodosis</copyright>
+    <fileDescription>Game: about to find the hidden words inside the table</fileDescription>
+    <copyright>DionysisTheodosis</copyright>
     <productVersion>1.0.0.0</productVersion>
     <txtProductVersion>NL</txtProductVersion>
     <productName>WordSearch</productName>
-    <companyName></companyName>
+    <companyName>DionApps</companyName>
     <internalName>WordSearch</internalName>
     <originalFilename>WordSearch.exe</originalFilename>
     <trademarks></trademarks>
