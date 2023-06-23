@@ -5,21 +5,14 @@
 package wifipasswords;
 
 import java.awt.Container;
-import java.awt.Frame;
 import java.awt.Toolkit;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JLabel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.util.Iterator;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.SwingUtilities;
 import javax.swing.border.TitledBorder;
-import javax.swing.border.Border;
 
 
 /**
@@ -29,15 +22,14 @@ import javax.swing.border.Border;
 public class MyJFrame extends javax.swing.JFrame {
     private ArrayList<WifiProfile> profiles;
     private String[] names;
-    private Toolkit thekit;   
+    private final Toolkit thekit;   
     private WifiProfile connectedProfile;
     private NetWorkProfiles network;
-    private Container pane;
     /**
      * Creates new form JFrame
      */
     public MyJFrame(NetWorkProfiles network) {
-        this.pane = this.getContentPane();
+       
         this.network=network;
         thekit = this.getToolkit(); 
         this.setTitle("Wi-Fi Toolbox"); //DINOUME TITLO STO FRAME
@@ -126,10 +118,10 @@ public class MyJFrame extends javax.swing.JFrame {
                     }
                 }
                 TitledBorder titledBorder = (TitledBorder) jPanel3.getBorder();
-                titledBorder.setTitle("Κωδικός Επιλεγμένου Wi-Fi");
+                titledBorder.setTitle("Selected Wi-Fi Password");
                 jPanel3.setBorder(titledBorder);
                 titledBorder = (TitledBorder) jPanel4.getBorder();
-                titledBorder.setTitle("QR Code Επιλεγμένου Wi-Fi");
+                titledBorder.setTitle("Selected Wi-Fi QR Code");
                 jPanel4.setBorder(titledBorder);
                 jPanel3.repaint();
                 jPanel3.revalidate();
@@ -197,22 +189,12 @@ public class MyJFrame extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Iterator<WifiProfile> iterator = profiles.iterator();
-        while (iterator.hasNext()) {
-            WifiProfile profile = iterator.next();
-            if (profile.isConnected()) {
-                connectedProfile=profile;
-                jLabel5.setText(profile.getName());
-                jLabel2.setText(profile.getPassword());
-                try{
-                    WifiQr qrCode = new WifiQr(profile);
-                    setImage(qrCode);
-                }
-                catch(FileNotFoundException ex){
-                    System.out.println("File Not Found for the qr code image");
-                }
+        setConnectedLabels();
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
             }
-        }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -374,12 +356,44 @@ public class MyJFrame extends javax.swing.JFrame {
             });
             dialog.setVisible(true);
            
-                                    
-       
-        
-        
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+       jList1.clearSelection(); 
+       setConnectedLabels();
+        
+    }//GEN-LAST:event_jLabel5MouseClicked
+    private void setConnectedLabels(){
+        Iterator<WifiProfile> iterator = profiles.iterator();
+        while (iterator.hasNext()) {
+            WifiProfile profile = iterator.next();
+            if (profile.isConnected()) {
+                connectedProfile=profile;
+                jLabel5.setText(profile.getName());
+                jLabel2.setText(profile.getPassword());
+                try{
+                    WifiQr qrCode = new WifiQr(profile);
+                    setImage(qrCode);
+                }
+                catch(FileNotFoundException ex){
+                    System.out.println("File Not Found for the qr code image");
+                }
+            }
+        }
+        if((TitledBorder) jPanel4.getBorder()!=null){
+            TitledBorder titledBorder = (TitledBorder) jPanel3.getBorder();
+            titledBorder.setTitle("Connected Wi-Fi Password");
+            jPanel3.setBorder(titledBorder);
+            titledBorder = (TitledBorder) jPanel4.getBorder();
+            titledBorder.setTitle("Connected Wi-Fi QR Code");
+            jPanel4.setBorder(titledBorder);
+            jPanel3.repaint();
+            jPanel3.revalidate();
+            jPanel4.repaint();
+            jPanel4.revalidate();
+        }
+
+    }
     /**
      * @param args the command line arguments
      */
