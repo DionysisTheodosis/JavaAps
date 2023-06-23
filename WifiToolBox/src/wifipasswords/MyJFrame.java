@@ -184,6 +184,11 @@ public class MyJFrame extends javax.swing.JFrame {
 
         jPanel5.setBackground(getBackground());
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Connected Wi-Fi", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel5MouseClicked(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -363,6 +368,11 @@ public class MyJFrame extends javax.swing.JFrame {
        setConnectedLabels();
         
     }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
+       jList1.clearSelection(); 
+       setConnectedLabels();
+    }//GEN-LAST:event_jPanel5MouseClicked
     private void setConnectedLabels(){
         Iterator<WifiProfile> iterator = profiles.iterator();
         while (iterator.hasNext()) {

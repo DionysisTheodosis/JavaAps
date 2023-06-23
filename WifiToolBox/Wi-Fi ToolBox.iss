@@ -8,7 +8,7 @@
 [Setup]
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-DefaultDirName={pf32}\{#MyOutputDir}
+DefaultDirName={pf}\{#MyOutputDir}
 DefaultGroupName={#MyAppName}
 OutputDir={#MyOutputDir}
 OutputBaseFilename="Wi-Fi ToolBox-Setup"
@@ -63,3 +63,6 @@ Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Working
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{#MyAppName}"; Flags: nowait postinstall skipifsilent
+
+[UninstallDelete]
+Type: filesandordirs; Name: {#MyOutputDir}
