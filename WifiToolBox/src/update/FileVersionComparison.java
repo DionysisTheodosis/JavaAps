@@ -10,6 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import javax.net.ssl.HttpsURLConnection;
 
 public class FileVersionComparison {
     private boolean versionsMatch;
@@ -42,8 +43,15 @@ public class FileVersionComparison {
        
         try{
             URL url = new URL(fileUrl);
-            InputStream in = url.openStream();
+            HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
+            connection.setRequestProperty("Cache-Control", "no-cache");
+            connection.setRequestProperty("Pragma", "no-cache");
+
+            InputStream in = connection.getInputStream();
             Files.copy(in, Path.of(destinationFilePath), StandardCopyOption.REPLACE_EXISTING);
+
+            connection.disconnect();
+         
         }
         catch(IOException ex){
            //return;
