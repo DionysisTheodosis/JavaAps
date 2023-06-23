@@ -4,6 +4,7 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/dionysis/Documents/JavaApps/JavaAps/WifiToolBox/src/update/FileDownloader.java</file>
+            <file>file:/C:/Users/dionysis/Documents/JavaApps/JavaAps/WifiToolBox/src/wifipasswords/WifiQr.java</file>
             <file>file:/C:/Users/dionysis/Documents/JavaApps/JavaAps/WifiToolBox/src/wifipasswords/QrScanner.java</file>
             <file>file:/C:/Users/dionysis/Documents/JavaApps/JavaAps/WifiToolBox/src/update/FileVersionExtractor.java</file>
             <file>file:/C:/Users/dionysis/Documents/JavaApps/JavaAps/WifiToolBox/src/wifipasswords/MyJFrame.java</file>
@@ -17,6 +18,7 @@
             <file>file:/C:/Users/dionysis/Documents/JavaApps/JavaAps/WifiToolBox/src/update/DownloadDialog.java</file>
             <file>file:/C:/Users/dionysis/Documents/JavaApps/JavaAps/WifiToolBox/src/wifipasswords/DisplayMessageNotConnect.java</file>
             <file>file:/C:/Users/dionysis/Documents/JavaApps/JavaAps/WifiToolBox/src/wifipasswords/NetWorkProfiles.java</file>
+            <file>file:/C:/Users/dionysis/Documents/JavaApps/JavaAps/WifiToolBox/nbproject/build-impl.xml</file>
             <file>file:/C:/Users/dionysis/Documents/JavaApps/JavaAps/WifiToolBox/src/update/UpdateApp.java</file>
             <file>file:/C:/Users/dionysis/Documents/JavaApps/JavaAps/WifiToolBox/src/wifipasswords/ConnectedWifiKey.java</file>
             <file>file:/C:/Users/dionysis/Documents/JavaApps/JavaAps/WifiToolBox/src/wifipasswords/CheckConnected.java</file>
