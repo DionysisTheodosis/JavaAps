@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\Users\dionysis\Documents\Wi-Fi ToolBox\WifiPasswords.jar</jar>
+  <outfile>C:\Users\dionysis\Documents\Wi-Fi ToolBox\Wi-Fi ToolBox.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>true</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>C:\Users\dionysis\Documents\Wi-Fi ToolBox\wifiPass.ico</icon>
+  <jre>
+    <path>jre</path>
+    <bundledJre64Bit>false</bundledJre64Bit>
+    <bundledJreAsFallback>true</bundledJreAsFallback>
+    <minVersion>1.4</minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+    <runtimeBits>64/32</runtimeBits>
+  </jre>
+  <versionInfo>
+    <fileVersion>1.5.0.0</fileVersion>
+    <txtFileVersion>NA</txtFileVersion>
+    <fileDescription>Application about viewing Wifi passwords and connecting via qr code</fileDescription>
+    <copyright>DionysisTheodosis</copyright>
+    <productVersion>1.5.0.0</productVersion>
+    <txtProductVersion>NA</txtProductVersion>
+    <productName>Wi-Fi ToolBox</productName>
+    <companyName></companyName>
+    <internalName>Wi-Fi ToolBox</internalName>
+    <originalFilename>Wi-Fi ToolBox.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>ENGLISH_US</language>
+  </versionInfo>
+</launch4jConfig>
